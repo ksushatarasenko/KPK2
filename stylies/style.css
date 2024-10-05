@@ -1,0 +1,668 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+/* ====== HEADER ================ */
+header{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+header ul{
+    display: flex;
+    gap: 4%;
+    padding: 2%;
+    list-style-type: none;
+}
+
+.li a{
+    font-size: 24px;
+    color:bisque;
+}
+.ulhead{
+   display: flex;
+   flex-wrap: wrap;
+}
+/* ========= MAIN =============== */
+.main{
+   max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    padding: 1%;
+}
+
+section{
+    width: 100%;
+    
+}
+.spisokLesson{
+   width: 100%;
+}
+.spisokLesson tr>th, tr>td{
+   text-align: center;
+   font-size: 20px;
+   
+}
+
+
+/* FON */
+.fon{
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   padding: 20px;
+   position: relative;
+   width: 100%; 
+   height: 100%; 
+   /* overflow: hidden;  */
+   color: rgb(30, 29, 29); /* Колір тексту */
+}
+.fon::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Чорний напівпрозорий фон */
+   z-index: -1; /* Помістити фон позаду тексту */
+   
+}
+.fon div{
+   margin: 12% 10%;
+}
+.fon div p{
+   font-size: 26px;
+}
+.fonYellow{
+   background-color: rgb(248, 248, 129);
+   padding: 3%;
+}
+.fonBlue{
+   width: 95%;
+   background-color: rgb(208, 245, 248);
+   padding: 3%;
+}
+.fonBlue p{
+   word-wrap: break-word; /* Переносит длинные слова */
+    overflow-wrap: break-word; /* Аналогично переносит слова */
+}
+.fonPink{
+   background-color: rgb(251, 204, 212);
+   padding: 2%;
+   width: 95%;
+}
+.fonLightPink{
+   background-color: rgb(251, 234, 237);
+   padding: 2%;
+   width: 80%;
+}
+.fonOrang{
+   background-color: rgb(239, 197, 119);
+   border-radius: 20px;
+   text-align: center;
+   color: rgb(75, 67, 67);
+   font-size: 22px;
+   padding: 1%;
+}
+/* =========== List Lesson ============== */
+.liLesson a{
+   font-size: 20px;
+   font-weight: 400;
+   text-decoration: none;
+   color: rgb(66, 132, 183);
+   margin-left: 1%;
+}
+ .liLesson{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .liLesson img{
+   width: 35px;
+   height: 20px;
+ }
+ 
+ .checkbox{
+   margin-left: auto;
+   margin-right: 0.5px;
+   width: 20px;
+   height: 20px;
+}
+
+.marginLeft{
+   margin-left: 5%;
+}
+ 
+ /* ===== FOOTER ========= */
+ .footer{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    margin-bottom: 3%;
+ }
+
+@media (max-width: 1048px) {
+   .prezent ,
+   .video  {
+      width: 100%;
+   }
+   .main{
+      width: 80%;
+      margin: 0 auto;
+   }
+
+   .two, .three {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+     
+   }
+   
+}
+
+@media (max-width: 890px) {
+   
+   .prezent ,
+   .video  {
+      height: 400px;
+   }
+   /* .prezent iframe{
+      width: 100%;
+      height: 100%;
+   } */
+
+   .two, .three {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .two img, .three img{
+      width: 90%;
+   }
+}
+@media (max-width: 780px) {
+   
+   .prezent ,
+   .video  {
+      height: 300px;
+   }
+}
+/* ============== */
+.plan{
+   width: 1400px;
+   height: 700px;
+}
+.img{
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+}
+.image img{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center;
+   align-items: center; */
+   margin: 0 auto;
+}
+/* ======= IMAGE ========= */
+.image{
+   width: 80%;
+   /* height: 800px; */
+   padding: 1%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin: 0 auto;
+}
+.image iframe{
+   width: 100%;
+   height: 100%;
+}
+.image img{
+   max-width: 80%;
+}
+
+.zoomable {
+   transition: transform 1.5s ease;
+   cursor: pointer;
+}
+.zoomable:hover {
+   transform: scale(1.5); 
+}
+
+/*  */
+
+
+/* Стили для модального окна */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 999;
+   padding-top: 50px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0,0,0,0.9);
+ }
+ 
+ .modal-content {
+   margin: auto;
+   display: block;
+   max-width: 90%;
+   max-height: 90%;
+ }
+ 
+ /* Таблица*/
+ table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-bottom: 20px;
+}
+th, td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: left;
+   font-size: 24px;
+}
+th {
+   background-color: #f2f2f2;
+}
+/* answer */
+.answer {
+    display: none;
+}
+.question {
+    margin-bottom: 20px;
+}
+.question button {
+    margin-top: 10px;
+}
+.answ{
+    padding: 0.5%;
+    background-color: rgb(234, 241, 100);
+}
+/* ZADANIE */
+.zadanie{
+   width: 100%;
+   padding: 1%;
+   font-size: 28px;
+   color: rgb(60, 4, 60);
+   display: flex;
+   gap: 5%;
+   justify-content:center;
+}
+/* ------- BLOCK ZADANIA --------- */
+.blockZadanie{
+   border: 1px solid gray;
+   padding: 1%;
+   margin: 15px 0;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* небольшая тень */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* плавные переходы */
+   border-top: 2px solid coral;
+}
+.blockZadanie:hover {
+   transform: scale(1.05); /* увеличение на 5% при наведении */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* усиление тени при наведении */
+}
+
+.blockEnglish{
+   border: 1px solid rgb(36, 24, 85);
+   padding: 1%;
+   margin: 15px 0;
+   box-shadow: 0 6px 8px rgba(51, 4, 204, 0.1); /* небольшая тень */
+   border-radius: 7px;
+   border-top: 2px solid rgb(232, 40, 40);
+}
+/* ----- end BLOCK ZADANIA ----------- */
+
+.zadanie select{
+   background-color: rgb(194, 192, 192);
+   padding: 0.5%;
+}
+.zadacha{
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+}
+.question{
+   margin: 3%;
+   width: 100%;
+   font-size: 20px;
+   background-color: rgb(209, 236, 249);
+   padding: 3%;
+}
+.vopros{
+   font-weight: 800;
+   margin-bottom: 3%;
+}
+label{
+   margin-left: 7%;
+}
+#quiz-form{
+   padding: 2%;
+   width: 95%;
+}
+
+.result {
+   margin-top: 20px;
+}
+
+.btn{
+   background-color: rgb(173, 198, 123);
+   border:rgb(173, 198, 123);
+   padding: 1.5%;
+   font-size: 18px;
+}
+
+.correct {
+   color:wheat;
+   background-color: green;
+}
+.incorrect {
+   color: wheat;
+   background-color: red;
+}
+
+/* ------ BUTTON ------------ */
+
+button{
+   margin-top: 4%;
+   background-color: rgb(168, 250, 210);
+   font-size: 16px;
+   width: 100px;
+   height: 30px;
+   text-align: center;
+}
+.flexbutton{
+   display: flex;
+   justify-content: space-around;
+   gap: 3%;
+   align-items: center;
+   width: 90%;
+   margin: 10px auto;
+}
+
+/* -------- END BUTTON ------------ */
+.marker {
+   font-weight: bold;
+}
+
+.box{
+   display: flex;
+   justify-content: center;
+   gap: 5%;
+}
+.centr{
+   text-align: center;
+}
+/* play-sound */
+
+.play-sound{
+   cursor: pointer;
+   transition: transform 0.3s ease;
+}
+.play-sound:hover{
+   transform: scale(1.1);
+}
+
+/* ----------- END LINE --------------- */
+
+input {
+   font-size: 20px;
+   width: 40px;
+   text-align: center;
+   background-color: rgb(241, 238, 238);
+   border: 1px solid gray;
+}
+
+.chek{
+   width: 150px;
+   text-align: center;
+   padding: 2px;
+}
+/* end interactive */
+/* radio label */
+.task {
+   margin-bottom: 10px;
+}
+.task img {
+   display: block;
+   margin-bottom: 10px;
+   width: 100%; /* Примерный размер, можете изменить */
+   height: auto;
+}
+.options {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-content: space-between;
+   
+}
+
+.boxRadio{
+   margin-right: 1px;
+   width: 30%;
+   text-align: right;
+   display: flex;
+   justify-content: flex-end;
+}
+/*  */
+.selected {
+   text-decoration: underline;
+}
+
+.question {
+   margin-top: 2%;
+}
+
+.questions {
+   margin-bottom: 2%;
+}
+
+.chek{
+   width: 150px;
+   text-align: center;
+   padding: 2px;
+}
+.smile{
+   width: 75px;
+   height: 70px;
+   padding: 2%;
+   margin-right: 10px;
+}
+.smile img{
+   width: 75px;
+   height: 70px;
+}
+/* -------------- POKAZ OTWETA OPTIMA -------------*/
+.hint2-container {
+   background-color: #e8f4fd;
+   border-radius: 10px;
+   border: 1px solid #b9d6f3;
+   padding: 5px 20px;
+   margin: 20px auto;
+   cursor: pointer;
+   width: 90%;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Заголовок блока */
+.hint2-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+   font-size: 16px;
+   color: #2d2d2d;
+}
+
+/* Левый значок (иконка) через ::before */
+.hint2-header::before {
+   content: '';
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   margin-right: 10px;
+   background-image: url('../../../image/shapka.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: opacity 0.3s ease-in-out;
+   opacity: 1;
+}
+
+/* Стрелка справа через ::after */
+.hint2-header::after {
+   content: '';
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   background-image: url('../../../image/strelkaVerch.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: transform 0.3s ease-in-out;
+   transform: rotate(0deg);
+}
+
+/* Контент с текстом */
+.hint2-content {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.6s ease-in-out, padding 0.3s ease-in-out;
+   padding: 0 2px 0 2px;
+   opacity: 0; /* Для плавного появления и исчезновения текста */
+   transition: opacity 0.3s ease-in-out, max-height 0.6s ease-in-out, padding 0.6s ease-in-out;
+}
+.hint2-content p{
+   font-size: 18px;
+}
+
+/* Раскрытие блока */
+.hint2-container.active .hint2-content {
+   padding: 0 2px 5px 2px;
+   max-height: 1000px; /* Достаточно для раскрытия текста */
+   opacity: 1; /* Плавное появление */
+   
+   max-width: 100%;
+}
+
+/* Плавное скрытие иконки при активации */
+.hint2-container.active .hint2-header::before {
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+
+/* Поворот стрелки при активации */
+.hint2-container.active .hint2-header::after {
+   transform: rotate(180deg);
+}
+
+/* ---------- END POKAZ OTWETA OPTIMA ------------------ */
+
+/* ------------- ВЫПАДАЮЩИЙ СПИСОК --------------------- */
+
+.select-container {
+   display: flex;
+   flex-direction: column;
+   width: 600px;
+   margin-top: 20px;
+   
+}
+.select-container select, .select-container input {
+   margin: 10px 0;
+}
+
+.blockSelect {
+   font-size: 20px;
+   display: flex;
+   align-items: center;
+   gap: 3px;
+}
+.blockSelect select{
+   font-size: 16px;
+   padding: 3px;
+   border: 1px solid gray;
+   border-radius: 5px;
+   width: 100px;
+}
+
+/* ------------ end ВЫПАДАЮЩИЙ СПИСОК ------------------ */
+/* -------- SETKA ----------- */
+.setka{
+   width: 100%;
+   max-width: 120px;
+   max-height: 120px;
+}
+.setka td{
+   width: 40px;
+   height: 40px;
+   text-align: center;
+   vertical-align: bottom;
+   border: 1px solid #ccc;
+}
+/* Стили для строки с большими числами */
+.standart td {
+   font-size: 20px;  /* Увеличенный шрифт для стандартных чисел */
+   color: #000; /* Чёрный цвет для основного текста */
+   border: 1px solid #a2a1a1;
+   width: 40px;
+   height: 40px;
+}
+/* Стили для мини чисел (в уме) */
+.mini td input {
+   color: rgb(4, 4, 137); /* Цвет для текста */
+   font-size: 14px; /* Размер шрифта */
+   width: 25px;  /* Поля ввода на всю ширину ячеек */
+   border: none;  /* Без рамки для мини полей */
+   text-align:end; /* Выравнивание текста по правому краю */
+   box-sizing: border-box;
+}
+/* Дополнительные стили для полей ввода */
+input.line_5 {
+   font-size: 18px; /* Стандартный размер для чисел ввода */
+   border: 1px solid #999; /* Рамка для текстовых полей */
+   text-align: center; /* Выравнивание текста по центру */
+   box-sizing: border-box;
+}
+input.line_5:focus {
+   outline: 2px solid #00f; /* Синий фокус */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* end Container usno i pismeno */
+/* <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>6</mn></mfrac></math> */
+
+/* <div class="vidpovid p">
+                        <button onclick="toggleAnswer(2)" class="answ">відповідь</button>
+                        <div id="answer2" class="answer blue">
+                           
+                        </div>
+                    </div> */

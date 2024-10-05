@@ -1,0 +1,154 @@
+h1{
+    color: blueviolet;
+    font-size: 2em;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: green;
+    font-size: 1.8em;
+}
+h3{
+   font-size: 26px; 
+   margin-top: 2%;
+   color: rgb(125, 45, 125);
+   padding: 0 3%;
+}
+h4{
+   font-size: 22px; 
+   margin-top: 2%;
+   color: rgb(64, 122, 30);
+   padding: 0 3%;
+}
+h5{
+   font-size: 20px;
+   color: rgb(83, 79, 79);
+   margin-top: 2%;
+}
+.p{
+   font-size: 26px;
+   text-indent: 30px;
+   padding: 1%;
+}
+p{
+   font-size: 22px;
+   margin: 1%;
+   text-indent: 30px;
+}
+
+.p14{
+   font-size: 14px;
+}
+.p16{
+   font-size: 16px;
+}
+.tab16 th,td{
+   font-size: 16px;
+   text-align: center;
+}
+
+.p18{
+   font-size: 18px;
+}
+.p22{
+   font-size: 22px;
+   color: rgb(75, 72, 72);
+}
+.p24{
+   font-size: 24px;
+}
+.p26{
+   font-size: 26px;
+}
+.p28{
+   font-size: 28px;
+}
+.p38{
+   font-size: 38px;
+}
+.red{
+   color: red;
+}
+.blue{
+   color: blue;
+}
+.green{
+   color: green;
+}
+.coral{
+   color: coral;
+}
+.b{
+   font-weight: 900;
+   color: blue;
+}
+.textLesson{
+   width: 85%;
+   margin: 0 auto;
+   background-color: rgb(246, 246, 228);
+   padding: 2%;
+   font-size: 22px;
+   line-height: 1.4;
+}
+.bal{
+   color: rgb(224, 5, 133);
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style: italic;
+   text-align: center;
+   font-size: 30px;
+}
+.violet{
+   color: rgb(151, 43, 151);
+}
+
+.p20{
+   font-size: 20px;
+}
+.weight{
+   font-weight: 900;
+}
+.italic{
+   font-style: italic;
+}
+.encyklopediaTitle{
+   font-size: 30px;
+   color: rgb(76, 74, 74);
+   font-weight: 600;
+}
+.text{
+   padding: 2%;
+   line-height: 1.5;
+   border: 2px solid gray;
+   border-radius: 20px;
+   margin: 2%;
+   font-size: 34px;
+   text-indent: 60px;
+}
+.avtor{
+   text-align: right;
+   width: 98%;
+   font-size: 24px;
+}
+.homework{
+   margin: 0 auto;
+   width: 25%;
+}
+
+/* InfoText */
+.infoText{
+    background-color: beige;
+    padding: 3%;
+  }
+  .infoText p{
+    margin-top: 4%;
+  }
+  hr{
+    color: green;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .urovnenie{
+    width: 200px;
+  }
+ 

@@ -1,0 +1,35 @@
+/* --------------- LINE ------------------*/
+.line{
+    width: 200px;
+ }
+ .line_1{
+    width: 100px;
+    font-size: 18px;
+ }
+ .line_2{
+    width: 100px;
+    font-size: 16px;
+ }
+ .line_3{
+    width: 300px;
+    font-size: 16px;
+ }
+ .line_4{
+    width: 40px;
+    font-size: 18px;
+ }
+ .line_5{
+    width: 30px;
+    font-size: 18px;
+ }
+ .line_6{
+    width: 50px;
+    font-size: 18px;
+ }
+ .line_7{
+    width: 400px;
+ }
+ .line_8{
+    width: 65px;
+    font-size: 18px;
+ }
