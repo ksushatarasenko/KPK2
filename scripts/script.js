@@ -42,46 +42,53 @@ function checkAnswers(setId) {
 }
 
 // кнопка для подсказки
-function toggleHints(hintsId) {
-    var hints = document.getElementById(hintsId);
-    if (hints.style.display === "none") {
-        hints.style.display = "block";
-    } else {
-        hints.style.display = "none";
-    }
-}
-// Функция для проверки ответов и подсчета баллов
-let totalScore = 0;
-function checkAnswersBal(setId) {
-    const set = document.getElementById(setId);
-    const inputs = set.querySelectorAll('input[data-answer]');
-    let score = 0;  // Баллы за это задание
-
-    inputs.forEach(input => {
-        const correctAnswer = input.getAttribute('data-answer').toLowerCase();
-        const userAnswer = input.value.trim().toLowerCase();
-
-        if (userAnswer === correctAnswer) {
-            input.classList.add('correct');
-            input.classList.remove('incorrect');
-            score += 1;  // Добавляем 1 балл за правильный ответ
-        } else {
-            input.classList.add('incorrect');
-            input.classList.remove('correct');
-        }
-    });
-
-    // Обновляем общий счет по мере прохождения
-    totalScore += score;
-
-    // Выводим результат под текущим заданием
-    const resultElement = document.getElementById('result-' + setId);
-    resultElement.innerHTML = `Ваш результат за это задание: ${score} из ${inputs.length}`;
+function toggleHints(element) {
+    element.classList.toggle("active");
 }
 
-// Функция для подсчета и вывода общего результата по всем заданиям
-function checkTotalScore() {
-    // По вашему запросу, эта функция должна выполняться только после всех проверок
-    const totalResultElement = document.getElementById('total-result');
-    totalResultElement.innerHTML = `Общий результат по всем заданиям: ${totalScore}`;
+// выбор ответа из трех
+function handleQuizAnswers(quizContainerId = 'questions', checkButtonId = 'checkAnswers') {
+	const quizContainer = document.getElementById(quizContainerId);
+	const checkButton = document.getElementById(checkButtonId);
+
+	if (!quizContainer || !checkButton) return;
+
+	// Выбор ответа
+	quizContainer.querySelectorAll('.question').forEach((question, questionIndex) => {
+		const options = question.querySelectorAll('.option');
+		options.forEach((option, index) => {
+			option.addEventListener('click', () => {
+				// Удаляем активные классы
+				options.forEach(opt => {
+					opt.classList.remove('selected');
+					opt.style.color = ''; // сбрасываем цвет
+				});
+				// Добавляем класс выбранному варианту
+				option.classList.add('selected');
+				option.style.color = 'blue';
+			});
+		});
+	});
+
+	// Проверка ответов
+	checkButton.addEventListener('click', () => {
+		quizContainer.querySelectorAll('.question').forEach((question) => {
+			const correctIndex = parseInt(question.dataset.correct, 10);
+			const options = question.querySelectorAll('.option');
+			options.forEach((option, index) => {
+				option.style.textDecoration = 'none'; // убираем подчеркивание
+				if (index === correctIndex) {
+					option.style.color = 'green'; // правильный — зелёный
+					option.style.fontWeight = 'bold';
+				} else if (option.classList.contains('selected')) {
+					option.style.color = 'red'; // выбранный, но неправильный — красный
+				}
+			});
+		});
+	});
 }
+
+// Инициализация при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+	handleQuizAnswers();
+});

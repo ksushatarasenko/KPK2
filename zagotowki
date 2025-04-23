@@ -1,21 +1,20 @@
 wyrażanie
 ż
 <!--  -->
-<div class="question-set" id="set108">
-    <div class="dialog primer zadacza">
+<div class="question-set" id="set702A1">
+    <div class="dialog">
         <div class="colors italic">
-            <p class="p20"> господиня законсервувула <input type="text" data-answer="20" class="line_6">л томатного
-                соку.
+            <p class="p20">1. Bałtyk to <b class="blue">morze</b>.
+            </p>
+        </div>
+        <div class="colors italic">
+            <p class="p20">2. Tam mieszkają kury, krowy, konie - <input type="text" data-answer="20" class="line_1">
             </p>
         </div>
     </div>
 </div>
-
-
-<button onclick="checkAnswersTrue('set108', 'smile-set108')">Check</button>
-
-
-<div class="hint2-container" onclick="toggleHint2(this)">
+<button onclick="checkAnswers('set702A1',)" style="margin-left: 5%;">Check</button>
+<div class="hint2-container" onclick="toggleHints(this)">
     <div class="hint2-header"></div>
     <div class="hint2-content">
         <div class="image" style="width: 120%;margin-left: -10%;">
@@ -24,3 +23,62 @@ wyrażanie
     </div>
 </div>
 <!--  -->
+<!-- wybor iz 3 otwetow -->
+<div>
+    <div id="questions" class="quiz">
+        <div class="question" data-correct="2">
+          <p>a) jezioro</p>
+          <div class="options">
+            <div class="option" data-index="0">ładne</div>
+            <div class="option" data-index="1">górskie</div>
+            <div class="option" data-index="2">zgrabne</div>
+          </div>
+        </div>
+    
+        <div class="question" data-correct="1">
+          <p>b) góry</p>
+          <div class="options">
+            <div class="option" data-index="0">wysokie</div>
+            <div class="option" data-index="1">szczupłe</div>
+            <div class="option" data-index="2">piękne</div>
+          </div>
+        </div>
+        <div class="question" data-correct="0">
+            <p>c) las</p>
+            <div class="options">
+              <div class="option" data-index="0">gorący</div>
+              <div class="option" data-index="1">zielony</div>
+              <div class="option" data-index="2">duży</div>
+            </div>
+          </div>
+          <div class="question" data-correct="2">
+            <p>d) morze</p>
+            <div class="options">
+              <div class="option" data-index="0">ciepłe</div>
+              <div class="option" data-index="1">zimne</div>
+              <div class="option" data-index="2">górskie</div>
+            </div>
+          </div>
+          <div class="question" data-correct="1">
+            <p>e) rzeka</p>
+            <div class="options">
+              <div class="option" data-index="0">długa</div>
+              <div class="option" data-index="1">niska</div>
+              <div class="option" data-index="2">krótka</div>
+            </div>
+          </div>
+          <div class="question" data-correct="2">
+            <p>b) wieś</p>
+            <div class="options">
+              <div class="option" data-index="0">mała</div>
+              <div class="option" data-index="1">spokojna</div>
+              <div class="option" data-index="2">przystojna</div>
+            </div>
+          </div>
+      </div>
+    
+      <div style="text-align: center;">
+        <button id="checkAnswers" onclick="runQuizValidation()">Sprawdź</button>
+      </div>
+</div>
+<!-- end  wybor iz 3 otwetow -->

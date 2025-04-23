@@ -230,7 +230,7 @@ th {
     display: none;
 }
 .question {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .question button {
     margin-top: 10px;
@@ -283,11 +283,16 @@ th {
    flex-direction: column;
 }
 .question{
-   margin: 3%;
-   width: 100%;
+   margin: 0 auto;
+   width: 80%;
    font-size: 20px;
    background-color: rgb(209, 236, 249);
-   padding: 3%;
+   padding: 1%;
+}
+.options{
+   width: 50%;
+   margin-left: 20%;
+   color: #5b4a4a;
 }
 .vopros{
    font-weight: 800;
@@ -413,9 +418,9 @@ input {
    margin-top: 2%;
 }
 
-.questions {
+/* .questions {
    margin-bottom: 2%;
-}
+} */
 
 .chek{
    width: 150px;
@@ -548,7 +553,7 @@ input {
 
 /* ------------ end ВЫПАДАЮЩИЙ СПИСОК ------------------ */
 /* -------- SETKA ----------- */
-.setka{
+/* .setka{
    width: 100%;
    max-width: 120px;
    max-height: 120px;
@@ -577,16 +582,6 @@ input {
    text-align:end; /* Выравнивание текста по правому краю */
    box-sizing: border-box;
 }
-/* Дополнительные стили для полей ввода */
-input.line_5 {
-   font-size: 18px; /* Стандартный размер для чисел ввода */
-   border: 1px solid #999; /* Рамка для текстовых полей */
-   text-align: center; /* Выравнивание текста по центру */
-   box-sizing: border-box;
-}
-input.line_5:focus {
-   outline: 2px solid #00f; /* Синий фокус */
-}
 
 
 
@@ -598,12 +593,3 @@ input.line_5:focus {
 
 
 
-/* end Container usno i pismeno */
-/* <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>6</mn></mfrac></math> */
-
-/* <div class="vidpovid p">
-                        <button onclick="toggleAnswer(2)" class="answ">відповідь</button>
-                        <div id="answer2" class="answer blue">
-                           
-                        </div>
-                    </div> */

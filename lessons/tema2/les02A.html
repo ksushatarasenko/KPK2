@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>lesson2A</title>
+	<link rel="stylesheet" href="../../stylies/style.css">
+	<link rel="stylesheet" href="../../stylies/divBox.css">
+	<link rel="stylesheet" href="../../stylies/lines.css">
+	<link rel="stylesheet" href="../../stylies/texts.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<ul class="ulhead">
+				<li class="li"><a href="../../index.html">Home</a></li>
+			</ul>
+		</header>
+		<main class="main">
+			<h1>Krok po kroku - poziom 2</h1>
+			<h2>Lekcja 02_A -  Gdzie bylście na wakacjach?</h2>
+			<h2>góry, morze, jezioro, las ...</h2>
+			<h3>być - czas przeszły</h3>
+			<div class="image">
+				<img src="../../image/przypadki.png" alt="">
+			</div>
+			<h3><a href="https://quizlet.com/pl/954643514/kpkj2-lekcja-02-a-flash-cards/?i=4wzil5&x=1jqt"
+					target="_blank">nowe słownistwo >>></a></h3>
+			<!-- start -->
+			 <h3><a href="https://e-polish.eu/ecoursebook/kurs/JUN2/17-18" target="_blank"> E-book >>></a></h3>
+			<!-- 1 -->
+			<div class="blockZadanie">
+				<h4>Ćwiczenia 1 - [702A1] - Proszę popatrzeć na zdjęcia i uzupełnić zdania.</h4>
+				<div class="image" style="width: 60%;">
+					<img src="https://1drv.ms/i/s!Av5Voug-ar1TgqBNo0Iy9JQh6B7bCg?embed=1&width=1224&height=1306" alt="">
+				</div>
+				<div class="question-set" id="set702A1">
+					<div class="dialog">
+						<div class="colors italic">
+							<p class="p20">1. Bałtyk to <b class="blue">morze</b>.
+							</p>
+						</div>
+						<div class="colors italic">
+							<p class="p20">2. Tam mieszkają kury, krowy, konie - <input type="text" data-answer="wieś" class="line_1">.
+							</p>
+						</div>
+						<div class="colors italic">
+							<p class="p20">3. Wisła to najdłuższa polska <input type="text" data-answer="rzeka" class="line_1">.
+							</p>
+						</div>
+						<div class="colors italic">
+							<p class="p20">4. Tatry, Alpy, Himalaje to <input type="text" data-answer="góry" class="line_1">.
+							</p>
+						</div>
+						<div class="colors italic">
+							<p class="p20">5. Tam są wysokie drzewa, grzyby, jagody - <input type="text" data-answer="las" class="line_1">.
+							</p>
+						</div>
+						<div class="colors italic">
+							<p class="p20">6. Morskie Oko to <input type="text" data-answer="jezioro" class="line_1"> w Tatrach. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<button onclick="checkAnswers('set702A1',)" style="margin-left: 5%;">Check</button>
+				<div class="hint2-container" onclick="toggleHints(this)">
+					<div class="hint2-header"></div>
+					<div class="hint2-content">
+						<div class="image" style="width: 50%;">
+							<img src="https://1drv.ms/i/s!Av5Voug-ar1TgqBOnOM98wi5Rl4MfA?embed=1&width=880&height=380" alt="otwet702a1">
+						</div>
+					</div>
+				</div>
+			</div>
+			 <div class="image" style="width: 60%;">
+				<img src="https://1drv.ms/i/s!Av5Voug-ar1Tgf18yUDGMX4vSOqsRA?embed=1&width=651&height=504" alt="być-czas przeszły">
+			 </div>
+			<!-- 2 -->
+			<div class="blockZadanie">
+				<h4>Ćwiczenia 2 - [702A2] - Co nie pasuje? Dlaczego?</h4>
+				<div>
+					<div id="questions" class="quiz">
+						<div class="question" data-correct="2">
+						  <p>a) jezioro</p>
+						  <div class="options">
+							<div class="option" data-index="0">ładne</div>
+							<div class="option" data-index="1">górskie</div>
+							<div class="option" data-index="2">zgrabne</div>
+						  </div>
+						</div>
+					
+						<div class="question" data-correct="1">
+						  <p>b) góry</p>
+						  <div class="options">
+							<div class="option" data-index="0">wysokie</div>
+							<div class="option" data-index="1">szczupłe</div>
+							<div class="option" data-index="2">piękne</div>
+						  </div>
+						</div>
+						<div class="question" data-correct="0">
+							<p>c) las</p>
+							<div class="options">
+							  <div class="option" data-index="0">gorący</div>
+							  <div class="option" data-index="1">zielony</div>
+							  <div class="option" data-index="2">duży</div>
+							</div>
+						  </div>
+						  <div class="question" data-correct="2">
+							<p>d) morze</p>
+							<div class="options">
+							  <div class="option" data-index="0">ciepłe</div>
+							  <div class="option" data-index="1">zimne</div>
+							  <div class="option" data-index="2">górskie</div>
+							</div>
+						  </div>
+						  <div class="question" data-correct="1">
+							<p>e) rzeka</p>
+							<div class="options">
+							  <div class="option" data-index="0">długa</div>
+							  <div class="option" data-index="1">niska</div>
+							  <div class="option" data-index="2">krótka</div>
+							</div>
+						  </div>
+						  <div class="question" data-correct="2">
+							<p>b) wieś</p>
+							<div class="options">
+							  <div class="option" data-index="0">mała</div>
+							  <div class="option" data-index="1">spokojna</div>
+							  <div class="option" data-index="2">przystojna</div>
+							</div>
+						  </div>
+					  </div>
+					
+					  <div style="text-align: center;">
+						<button id="checkAnswers" onclick="runQuizValidation()">Sprawdź</button>
+					  </div>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="blockZadanie">
+				<h4>Ćwiczenia 3 - [702A3] - Proszę przeczytać dialogi.</h4>
+				<div class="image">
+					<audio src="../../audio/lekcja_02/019.mp3" controls></audio><br>
+					<img src="https://1drv.ms/i/s!Av5Voug-ar1TgqBPxr_fADQvKYpsOg?embed=1&width=1728&height=982" alt="">
+				</div>
+			</div>
+			<!-- 4 -->
+			<div class="blockZadanie">
+				<h4>Ćwiczenia 4 - [702A4] - Proszę uzupełnić litery i dopasować puzzłe.</h4>
+				<div class="video">
+					<iframe style="max-width:100%" src="https://wordwall.net/uk/embed/1520b7658cb7443da213530e8f774b3b?themeId=62&templateId=3&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<!-- 5 -->
+			<div class="blockZadanie">
+				<h4>Ćwiczenia 5 - [702A5] - Proszę uzupełnić dialog dobrą formą czasownika <em class="violet">być</em> w czsie przeszłym, a następnie posłuchać i skontrolować.</h4>
+				<audio src="../../audio/lekcja_02/020.mp3" controls></audio>
+				<div class="video">
+					<iframe style="max-width:100%" src="https://wordwall.net/uk/embed/1520b7658cb7443da213530e8f774b3b?themeId=62&templateId=3&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<!--  -->
+			 <div class="two" style="width: 60%;margin-left: -10%;">
+				<img src="https://1drv.ms/i/s!Av5Voug-ar1Tgf19ZXRSP6h8UByc1Q?embed=1&width=321&height=451" alt="uwaga702A">
+				<img src="https://1drv.ms/i/s!Av5Voug-ar1Tgf1-i9hI9uxLF90VBQ?embed=1&width=443&height=382" alt="702a10">
+			 </div>
+
+			<!-- END -->
+		</main>
+		
+		
+	</div>
+	<!-- script -->
+	<script src="../../scripts/script.js"></script>
+
+</body>
+
+</html>

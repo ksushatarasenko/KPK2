@@ -133,4 +133,17 @@
    height: 900px;
    margin: 0 auto 0 -15%;
 }
+/*  */
+.blockZadanie{
+   border: 1px solid gray;
+   padding: 1%;
+   margin: 15px 0;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* небольшая тень */
+   transition: transform 0.3s ease, box-shadow 0.3s ease; /* плавные переходы */
+   border-top: 2px solid coral;
+}
+.blockZadanie:hover {
+   transform: scale(1.05); /* увеличение на 5% при наведении */
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* усиление тени при наведении */
+}
 
