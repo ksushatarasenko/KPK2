@@ -219,7 +219,7 @@ section{
 th, td {
    border: 1px solid #ddd;
    padding: 8px;
-   text-align: left;
+   text-align: center;
    font-size: 24px;
 }
 th {
